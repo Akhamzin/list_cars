@@ -1,0 +1,45 @@
+<div class="jumbotron">
+  <h1>Listing Cars</h1>
+</div>
+
+<div class="container">
+<div class="table-responsive">
+<% if notice %>
+    <p id="notice"><%= notice %></p>
+  <% end %>
+ 
+
+<table class="table table-striped table-bordered table-hover">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Name</th>
+      <th>Number</th>
+      <th>Pts</th>
+      <th>Pts date</th>
+      <th><%= button_to 'New', new_car_path, method: :get  %></th>
+      
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cars.each do |car| %>
+      <tr>
+        <td><%= @count += 1 %></td>
+        <td><%= car.name %></td>
+        <td><%= car.number.upcase %></td>
+        <td><%= car.pts.upcase %></td>
+        <td><%= car.pts_date.to_date.strftime("%d.%m.%Y") %></td>
+        <!-- <td><%= link_to 'Show', car %></td> -->
+        <td><%= button_to 'Edit', edit_car_path(car), method: :get %></td>
+        <td><%= button_to 'Destroy', car, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+      <th>Total: <%= Car.count %> </th>
+  </tbody>
+</table>
+</div>
+</div>
+
+
+
