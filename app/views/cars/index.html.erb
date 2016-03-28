@@ -17,6 +17,7 @@
       <th>Number</th>
       <th>Pts</th>
       <th>Pts date</th>
+      <th>Photo</th>
       <th><%= button_to 'New', new_car_path, method: :get  %></th>
       
     </tr>
@@ -30,6 +31,12 @@
         <td><%= car.number.upcase %></td>
         <td><%= car.pts.upcase %></td>
         <td><%= car.pts_date.to_date.strftime("%d.%m.%Y") %></td>
+            <% if car.car_images.exists? %>
+              <% @m = "*" %>
+            <% else %>
+              <% @m = "" %>
+            <% end %>
+        <td><%= @m %></td>
         <!-- <td><%= link_to 'Show', car %></td> -->
         <td><%= button_to 'Edit', edit_car_path(car), method: :get %></td>
         <td><%= button_to 'Destroy', car, method: :delete, data: { confirm: 'Are you sure?' } %></td>

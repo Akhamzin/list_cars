@@ -3,4 +3,7 @@ class Car < ActiveRecord::Base
 	validates :number, presence: true, uniqueness: true
 	validates :pts, presence: true, uniqueness: true
 	validates :pts_date, presence: true
+
+	has_many :car_images, :dependent => :destroy
+	accepts_nested_attributes_for :car_images
 end
