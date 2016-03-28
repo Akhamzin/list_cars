@@ -1,44 +1,45 @@
+<div class="container">
 <div class="jumbotron">
-	<h1>New Car</h1>
+	<h1><%= t('cars.new.head') %></h1>
 </div>
 
 
-<div class="container">
+
 <%= form_for @car, html: { multipart: true } do |f| %>
   <% if @car.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@car.errors.count, "error") %> prohibited this car from being saved:</h2>
-
+      <h2><%=raw t('errors.template.header', count: @car.errors.count, model: t('activerecord.models.car')) %>.</h2>
+        <p><%= t('errors.template.body') %></p>
       <ul>
       <% @car.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+        <li><%=raw message %></li>
       <% end %>
       </ul>
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :name %><br>
+  <div class="form-group">
+    <%= f.label :name, t('cars.new.name') %><br>
     <%= f.text_field :name %>
   </div>
-  <div class="field">
-    <%= f.label :number %><br>
+  <div class="form-group">
+    <%= f.label :number, t('cars.new.number') %><br>
     <%= f.text_field :number %>
   </div>
-  <div class="field">
-    <%= f.label :pts %><br>
+  <div class="form-group">
+    <%= f.label :pts, t('cars.new.pts') %><br>
     <%= f.text_field :pts %>
   </div>
-  <div class="field">
-    <%= f.label :pts_date %><br>
-    <%= f.date_select(:pts_date, :order => [:day, :month, :year], :start_year => 1900) %>
+  <div class="form-group">
+    <%= f.label :pts_date, t('cars.new.pts_date') %><br>
+    <%= f.date_select(:pts_date, :order => [:day, :month, :year], :start_year => 1900, use_month_numbers: true) %>
   </div>
          
 
    <%= f.fields_for :car_images do |builder| %>
          <% if builder.object.new_record? %>
             <div class="form-group">
-              <%= builder.label :photo, "Image" %>
+              <%= builder.label :photo, t('cars.new.image') %>
               <%= builder.file_field :photo %>
             </div>
           <% end %>
@@ -50,5 +51,5 @@
 </div>
 
 <div class="container">
-	<%= button_to 'Back', cars_path, :method => :get %>
+	<%= button_to t('cars.new.back'), cars_path, :method => :get %>
 </div>

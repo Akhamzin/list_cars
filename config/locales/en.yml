@@ -20,4 +20,40 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+ layouts:
+  title: "Car list"
+ cars:
+  index:
+   head: "Car list"
+   name: "Car name"
+   number: "Car number"
+   pts: "PTS"
+   pts_date: "PTS date"
+   photo: "Photo"
+   new: "New"
+   edit: "Edit"
+   destroy: "Delete"
+   destroy_question: "Are you sure?"
+   total: "Total:"
+  new:
+   head: "Adding a new car"
+   name: "Car name"
+   number: "Car number"
+   pts: "PTS"
+   pts_date: "PTS date"
+   image: "Photo"
+   back: "Back"
+  edit:
+   head: "Edit a car"
+   name: "Car name"
+   number: "Car number"
+   pts: "PTS"
+   pts_date: "PTS date"
+   image: "Photo"
+   back: "Back"
+ helpers:
+  submit:
+   create: "Create"
+   update: "Update"
+ succ_created: "Car was successfully created."
+ succ_upd: "Car was successfully updated."

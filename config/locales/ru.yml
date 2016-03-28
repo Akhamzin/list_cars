@@ -1,0 +1,58 @@
+ru:
+ layouts:
+  title: "Список автомобилей"
+ cars:
+  index:
+   head: "Список автомобилей"
+   name: "Наименование"
+   number: "Гос. номер"
+   pts: "ПТС"
+   pts_date: "Дата ПТС"
+   photo: "Фото"
+   new: "Новый"
+   edit: "Редактировать"
+   destroy: "Удалить"
+   destroy_question: "Вы уверены?"
+   total: "Общее число:"
+  new:
+   head: "Добавить новый автомобиль"
+   name: "Наименование"
+   number: "Гос. номер"
+   pts: "ПТС"
+   pts_date: "Дата ПТС"
+   image: "Изображение"
+   back: "Назад"
+  edit:
+   head: "Изменить запись об автомобиле"
+   name: "Наименование"
+   number: "Гос. номер"
+   pts: "ПТС"
+   pts_date: "Дата ПТС"
+   image: "Изображение"
+   back: "Назад"
+ helpers:
+  submit:
+   create: "Создать запись"
+   update: "Обновить запись"
+ activerecord:
+  errors:
+   messages:
+    blank: "не может быть пустым"
+    invalid: "может содержать только буквы и цифры"
+    taken: "уже занят"
+ errors:
+  template:
+   body: "Ошибки в следующих полях:"
+   header:
+    one: "1 ошибка при вводе данных"
+    other: "%{count} ошибки при вводе данных"
+ activerecord:
+  models:
+   car: "автомобиль"
+  attributes:
+   car:
+    name: "Поле \"Наименование\""
+    number: "Поле \"Гос. номер\""
+    pts: "Поле \"ПТС\""
+ succ_created: "Запись успешно добавлена"
+ succ_upd: "Запись успешно обновлена"

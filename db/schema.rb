@@ -24,11 +24,13 @@ ActiveRecord::Schema.define(version: 20160328125217) do
     t.datetime "photo_updated_at"
   end
 
+  add_index "car_images", ["car_id"], name: "index_car_images_on_car_id"
+
   create_table "cars", force: :cascade do |t|
     t.string   "name"
     t.string   "number"
     t.string   "pts"
-    t.date     "pts_date"
+    t.datetime "pts_date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

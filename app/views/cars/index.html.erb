@@ -1,24 +1,25 @@
+<div class="container">
 <div class="jumbotron">
-  <h1>Listing Cars</h1>
+  <h1><%= t('cars.index.head') %></h1>
 </div>
 
-<div class="container">
-<div class="table-responsive">
+
 <% if notice %>
     <p id="notice"><%= notice %></p>
-  <% end %>
- 
+<% end %>
+<div class="table-responsive">
+
 
 <table class="table table-striped table-bordered table-hover">
   <thead>
     <tr>
       <th>#</th>
-      <th>Name</th>
-      <th>Number</th>
-      <th>Pts</th>
-      <th>Pts date</th>
-      <th>Photo</th>
-      <th><%= button_to 'New', new_car_path, method: :get  %></th>
+      <th><%= t('cars.index.name') %></th>
+      <th><%= t('cars.index.number') %></th>
+      <th><%= t('cars.index.pts') %></th>
+      <th><%= t('cars.index.pts_date') %></th>
+      <th><%= t('cars.index.photo') %></th>
+      <th><%= button_to t('cars.index.new'), new_car_path, method: :get  %></th>
       
     </tr>
   </thead>
@@ -38,11 +39,11 @@
             <% end %>
         <td><%= @m %></td>
         <!-- <td><%= link_to 'Show', car %></td> -->
-        <td><%= button_to 'Edit', edit_car_path(car), method: :get %></td>
-        <td><%= button_to 'Destroy', car, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= button_to t('cars.index.edit'), edit_car_path(car), method: :get %></td>
+        <td><%= button_to t('cars.index.destroy'), car, method: :delete, data: { confirm: t('cars.index.destroy_question') } %></td>
       </tr>
     <% end %>
-      <th>Total: <%= Car.count %> </th>
+      <th><%= t('cars.index.total')%> <%= Car.count %> </th>
   </tbody>
 </table>
 </div>

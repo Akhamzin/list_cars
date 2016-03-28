@@ -4,7 +4,7 @@ class CreateCars < ActiveRecord::Migration
       t.string :name
       t.string :number
       t.string :pts
-      t.date :pts_date
+      t.datetime :pts_date
 
       t.timestamps null: false
     end
