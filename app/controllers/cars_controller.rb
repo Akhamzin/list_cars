@@ -4,8 +4,14 @@ class CarsController < ApplicationController
   # GET /cars
   # GET /cars.json
   def index
-    @cars = Car.all
+    #@cars = Car.all
     @count = 0
+
+    if params[:set_locale]
+      redirect_to root_path(locale: params[:set_locale])
+    else
+      @cars = Car.all
+end
   end
 
   # GET /cars/1

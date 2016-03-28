@@ -1,8 +1,11 @@
 Rails.application.routes.draw do
   scope '(:locale)' do
     resources :cars
+
     root 'cars#index'
   end
+  match '/ru' , to: 'cars#index', via: :post
+  match '/en' , to: 'cars#index', via: :post
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

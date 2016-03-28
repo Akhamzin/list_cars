@@ -57,3 +57,4 @@ gem 'rmagick'
 gem 'sprockets-rails', :require => 'sprockets/railtie'
 
 gem 'paperclip'
+gem 'i18n', github: 'svenfuchs/i18n'
