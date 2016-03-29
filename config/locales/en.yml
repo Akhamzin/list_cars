@@ -57,6 +57,7 @@ en:
    update: "Update"
  succ_created: "Car was successfully created."
  succ_upd: "Car was successfully updated."
+ succ_del: 'Car was successfully deleted'
  errors:
   template:
    body: "Error in fields:"
