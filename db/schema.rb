@@ -27,12 +27,12 @@ ActiveRecord::Schema.define(version: 20160328125217) do
   add_index "car_images", ["car_id"], name: "index_car_images_on_car_id"
 
   create_table "cars", force: :cascade do |t|
-    t.string   "name"
+    t.string   "name",       limit: 50
     t.string   "number"
     t.string   "pts"
     t.datetime "pts_date"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",            null: false
+    t.datetime "updated_at",            null: false
   end
 
 end
