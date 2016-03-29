@@ -34,12 +34,6 @@ ru:
   submit:
    create: "Создать запись"
    update: "Обновить запись"
- activerecord:
-  errors:
-   messages:
-    blank: "не может быть пустым"
-    invalid: "может содержать только буквы и цифры"
-    taken: "уже занят"
  errors:
   template:
    body: "Ошибки в следующих полях:"
@@ -47,6 +41,22 @@ ru:
     one: "1 ошибка при вводе данных"
     other: "%{count} ошибки при вводе данных"
  activerecord:
+  errors:
+   models:
+    car:
+     attributes:
+      name:
+       blank: "не может быть пустым"
+       invalid: "имеет неверное значение"
+       taken: "уже существует"
+      number:
+       blank: "не может быть пустым"
+       invalid: "имеет неверное значение"
+       taken: "уже существует"
+      pts:
+       blank: "не может быть пустым"
+       invalid: "имеет неверное значение"
+       taken: "уже существует"
   models:
    car: "автомобиль"
   attributes:

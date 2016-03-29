@@ -1,17 +1,8 @@
 <div class="container">
-<div class="jumbotron">
   <h1><%= t('cars.index.head') %></h1>
-    <%= form_tag root_path, class: 'locale' do %>
-      <%= select_tag 'set_locale', options_for_select(LANGUAGES, I18n.locale.to_s), onchange: 'this.form.submit()' %>
-      <%= submit_tag 'submit' %>
-      <%= javascript_tag "$('.locale input').hide()" %>
+    <% if notice %>
+        <p id="notice"><%= notice %></p>
     <% end %>
-</div>
-
-
-<% if notice %>
-    <p id="notice"><%= notice %></p>
-<% end %>
 <div class="table-responsive">
 
 

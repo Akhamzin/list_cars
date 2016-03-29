@@ -57,3 +57,9 @@ en:
    update: "Update"
  succ_created: "Car was successfully created."
  succ_upd: "Car was successfully updated."
+ errors:
+  template:
+   body: "Error in fields:"
+   header:
+    one: "1 error found"
+    other: "%{count} errors found"
