@@ -39,7 +39,7 @@ end
     respond_to do |format|
       if @car.save
         format.html { redirect_to root_path, notice: I18n.t('.succ_created') }
-        format.json { render :show, status: :created, location: @car }
+        #format.json { render :show, status: :created, location: @car }
       else
         format.html { render :new }
         format.json { render json: @car.errors, status: :unprocessable_entity }
@@ -55,7 +55,7 @@ end
         format.html { redirect_to root_path, notice: I18n.t('.succ_upd') }
         format.json { render :show, status: :ok, location: @car }
       else
-        format.html { render :edit }
+        format.html { render :error }
         format.json { render json: @car.errors, status: :unprocessable_entity }
       end
     end

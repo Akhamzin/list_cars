@@ -59,6 +59,12 @@ ru:
        blank: "не может быть пустым"
        invalid: "имеет неверное значение"
        taken: "уже существует"
+    car_image: 
+     attributes:
+      photo: 
+       spoofed_media_type: "имеет не верный формат"
+      photo_content_type:
+       invalid: "не верный формат"
   models:
    car: "автомобиль"
   attributes:
@@ -66,6 +72,7 @@ ru:
     name: "\"Наименование\""
     number: "\"Гос. номер\""
     pts: "\"ПТС\""
+    Car_images: "галерея"
  succ_created: "Запись успешно добавлена"
  succ_upd: "Запись успешно обновлена"
  succ_del: 'Запись об автомобиле была успешно удалена'
